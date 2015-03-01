@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 import prueba
-from prueba.views import curent_datetime,hours_ahead
+from prueba.views import current_datetime,hours_ahead
 
 admin.autodiscover()
 
