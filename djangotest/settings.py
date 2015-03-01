@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -37,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'prueba',
+    'books',
 
 
 
@@ -60,9 +62,17 @@ WSGI_APPLICATION = 'djangotest.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        #'ENGINE': 'postgresql_psycopg2',
+        'NAME': 'djangotest',
+        'USER': 'danielcb',
+        'PASSWORD': '1144067772',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+
     }
 }
 
