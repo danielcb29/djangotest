@@ -19,7 +19,7 @@ class Author(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=40)
     email = models.EmailField()
-    headshot = models.ImageField(upload_to='/tmp')
+    headshot = models.ImageField(upload_to='estilos')
 
     def __str__(self):
         return self.first_name + " " + self.last_name
@@ -36,5 +36,3 @@ class Book(models.Model):
         return self.title
     class Meta:
         ordering=['title']
-    class Admin:
-        pass
