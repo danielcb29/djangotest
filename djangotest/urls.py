@@ -21,4 +21,5 @@ urlpatterns = patterns('',
     url(r'^contact/thanks$',thanks),
 
     url(r'^meta/$',display_meta),
+    url(r'^dcbook/$',show_dcbook)
 )

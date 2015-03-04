@@ -6,6 +6,7 @@ from django.core.mail import send_mail
 from django.http import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_protect #Dajngo csrf verification, no book
 from django.http import HttpResponse
+from books.forms import *
 # Create your views here.
 
 def search(request):
@@ -73,3 +74,7 @@ def display_meta(request):
 
 def thanks(request):
     return HttpResponse("Thanks for sending mail, we are going to send a feedback")
+def show_dcbook(request):
+    book = Book.objects.get()
+    form = BookForm(instance=book)
+    return HttpResponse(form)

@@ -10,4 +10,5 @@ urlpatterns = patterns('',
     #url(r'^plus/(\d{1,2})/$', hours_ahead),
     url(r'^english/$',search_new,name='new search'), # example for english book
 
+
 )
